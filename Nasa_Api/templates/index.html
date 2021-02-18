@@ -2,6 +2,7 @@
   <head>
     <title>Astronomy Picture Of The Day</title>
     <h1>Today's Picture is:</h1>
+    <p>{{ title }}</p>
       <form method="get" action="/about">
         <button type="submit">About Me</button>
       </form>
@@ -13,10 +14,12 @@
       display: block;
       }
   </style>
+    <p>{{ explanation }}</p>
   </head>
 
   <body>
     <img src="{{ url }}">
+
   </body>
 
 </html>
