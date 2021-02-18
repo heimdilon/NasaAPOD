@@ -14,8 +14,9 @@ def get_image():
     apod = requests.get("https://api.nasa.gov/planetary/apod?api_key=2T6sawFQJC8gfkmAI1GnGtWzu1tDqZguNnBwZRzR")
     apod_json = apod.json()
     image = apod_json['hdurl']
-    url = image
-    return render_template('index.html', url=url)
+    title = apod_json['title']
+    explanation = apod_json['explanation']
+    return render_template('index.html', url=image, title=title, explanation=explanation)
 @app.route("/about")
 def about():
     return render_template('about.html')
