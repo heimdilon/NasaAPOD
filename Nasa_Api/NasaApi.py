@@ -4,10 +4,6 @@
 from flask import Flask, render_template
 import requests
 
-#apod = requests.get("https://api.nasa.gov/planetary/apod?api_key=2T6sawFQJC8gfkmAI1GnGtWzu1tDqZguNnBwZRzR")
-#apod_json = apod.json()
-#image = apod_json['hdurl']
-
 app = Flask(__name__)
 @app.route("/")
 def get_image():
