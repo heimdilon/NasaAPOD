@@ -7,7 +7,7 @@ import requests
 app = Flask(__name__)
 @app.route("/")
 def get_image():
-    apod = requests.get("https://api.nasa.gov/planetary/apod?api_key=2T6sawFQJC8gfkmAI1GnGtWzu1tDqZguNnBwZRzR")
+    apod = requests.get("https://api.nasa.gov/planetary/apod?api_key=Your api key")
     apod_json = apod.json()
     image = apod_json['hdurl']
     title = apod_json['title']
